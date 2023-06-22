@@ -11,9 +11,9 @@
 - In new terminal run `rake database_listener`
 
 ## Gems used
-1. gem 'hairtrigger', '~> 1.0'
-2. gem 'sidekiq', '~> 7.1', '>= 7.1.2'
-3. gem "rspec-rails"
+1. gem 'hairtrigger', '~> 1.0' // For creating triggers within rails env
+2. gem 'sidekiq', '~> 7.1', '>= 7.1.2' # For background processes
+3. gem "rspec-rails" # For testing.
 
 ## Models
 1. Invoices - id (uuid), invoice_no(string), total_amount(int), timestamps
@@ -33,3 +33,4 @@
 - The invoice_items trigger also use pg_notify() for inter-process communication and sends message to rails application
 - Created an ApplicationJob which uses Sidekiq and listens to pg_notify commands. It also writes to Notifications table whenever a prompt is received. 
 - Created rake task "database_listener" which queues the above job
+- Have written just 1 rspec test but have could not proceed for paucity of time. 
