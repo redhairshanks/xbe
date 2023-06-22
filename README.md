@@ -1,10 +1,10 @@
 # README
 
 ## To run the code
-- Unzip the code file
+- Clone the repository
 - Change directory to xbe `cd xbe` 
 - Install dependencies `bundle install`
-- You need a postgres server running with username as 'root' and password as 'root'
+- You need a postgres server running with username as 'root' and password as 'root' and database xbe with root getting all privileges
 - Create database `rake db:create`
 - Install db changes `rake db:migrate`
 - In new terminal run to start sidekiq `bundle exec sidekiq -e development -C config/sidekiq.yml`
