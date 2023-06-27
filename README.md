@@ -34,3 +34,4 @@
 - Created an ApplicationJob which uses Sidekiq and listens to pg_notify commands. It also writes to Notifications table whenever a prompt is received. 
 - Created rake task "database_listener" which queues the above job
 - Have written just 1 rspec test but have could not proceed for paucity of time. 
+
